@@ -15,6 +15,16 @@
   color: #111;
 }
 .checkoutProduct__image {
+  object-fit: contain;
   height: 180px;
   width: 180px;
+}
+
+.checkoutProduct__rating {
+  display: flex;
+}
+
+.checkoutProduct__title {
+  font-size: 17px;
+  font-weight: 800;
 }
