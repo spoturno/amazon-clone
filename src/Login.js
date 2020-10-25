@@ -18,23 +18,11 @@ function Login() {
             .catch(error => alert(error.message));
 
     }
-
-    const register = e => {
-        e.preventDefault();
-        auth
-            .createUserWithEmailAndPassword(email, password)
-            .then((auth) => {
-                //successfully crated a new user with email and password
-                if (auth){
-                    history.push("/");
-                }
-            })
-            .catch( error => alert(error.message));
-    }
     return (
         <div className="login">
             <Link to="/">
                 <img
+                alt="imgLogoFormLogin"
                 className="login__logo"
                 src ="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png" />
             </Link>
@@ -54,10 +42,10 @@ function Login() {
                 </form>
 
                 <p>By signing-in you agree to the amazon fake clone conditions of use & sale. please see our privacy notice , our cookies notice and our interest-based ads notice.</p>
-            
-                <button 
-                onClick={register}
-                className="login__registerButton">Create your Amazon Account</button>
+
+                <button className="login__registerButton" onClick={e => history.push("/register")}>Create your Amazon Account</button>
+                
+                
             </div>
         </div>
     )

@@ -24,6 +24,7 @@ function Header() {
         <img
           src="https://onlinebusinessmanager.com/wp-content/uploads/2018/09/white-amazon-logo-png-6.png"
           className="header__logo"
+          alt="headerLogo"
         />
       </Link>
 
@@ -36,7 +37,7 @@ function Header() {
       <div className="header__nav">
         <Link to={!user && '/login'}>
         <div onClick={handleAuthentication} className="header__options">
-          <span className="header__optionLineOne"> Hello Usuario </span>
+          <span className="header__optionLineOne"> Hello {user ? user.email: `Guest`}</span>
           <span className="header__optionLineTwo"> {user ? 'Sing Out':'Sing In'}</span>
         </div>
         </Link>
