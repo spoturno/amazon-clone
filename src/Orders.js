@@ -27,7 +27,7 @@ function Orders() {
         }
         
 
-    }, [])
+    }, [user])
 
 
     return (
